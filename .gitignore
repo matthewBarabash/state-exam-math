@@ -7,6 +7,9 @@
 !*.tex
 !*.eps
 !*.png
+!*.jpeg
+!*.pdf
+!*.bib
 
 # ...even if they are in subdirectories
 !*/
