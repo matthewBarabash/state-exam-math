@@ -10,6 +10,7 @@
 !*.jpeg
 !*.pdf
 !*.bib
+!*.md
 
 # ...even if they are in subdirectories
 !*/
