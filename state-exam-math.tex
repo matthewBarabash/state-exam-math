@@ -1,6 +1,6 @@
 \documentclass{urticle}
 
-\usepackage[colorlinks=true]{hyperref}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=black ]{hyperref}
 
 
 \usepackage{amsthm}
@@ -14,6 +14,13 @@
 
 \newcommand{\prf}[1]{\hspace{0.3cm}$\triangleright$ \hspace{0.2cm} {#1} \hfill $\blacksquare$ }
 
+\pagestyle{fancy}
+%\fancyhead[LE,RO]{\textsl{\rightmark}}
+\fancyhead[LO,RE]{\textsl{\leftmark}}
+
+
+\renewcommand{\headrulewidth}{0.4pt}
+       
 \begin{document}
 
 \begin{titlepage}
@@ -29,6 +36,7 @@
     \centerline{МФТИ, \the\year~г.}
 \end{titlepage}
 
+\thispagestyle{empty}
 \tableofcontents
 \newpage
 
@@ -39,14 +47,14 @@
 \section{Математический анализ}
 \label{MathAnalysis}
 
-\subsection{Теорема Больцана-Вейрштрасса и критерий Коши сходимости числовой последовательности.}
+\subsection{Теорема Больцано-Вейерштрасса и критерий Коши сходимости числовой последовательности.}
     
     \begin{definition}
     \label{def:PartialLimit}
         Предел любой подпоследотвальности даной последовательности называют \textit{частичным пределом}
     \end{definition}    
     
-    \begin{theorem}
+    \begin{theorem}[Больцано-Вейерштрасса]
     \label{th:Bol-Ver}
         Любая ограниченная последовательность имеет хотя бы один частичный предел.
     \end{theorem}
@@ -83,8 +91,7 @@
     \prf{Пусть $\displaystyle \lim_{n\to\infty}x_n = x_0$ т.е. $\forall\varepsilon  \quad \exists N_\varepsilon: \forall n \geq N_\varepsilon \quad |x_n - x_0| < \dfrac{\varepsilon}{2}$. Значит, для $\forall n \geq N_\varepsilon$ и для $\forall m \geq N_\varepsilon$:
     \begin{center}
         $|x_n - x_m| \leq |x_n - x_0| + |x_m - x_0| \leq \dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2} \leq \varepsilon $
-    \end{center}
-    }
+    \end{center}}
         
     \begin{theorem}
     \label{th:IfKoshi}
